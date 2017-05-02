@@ -1,0 +1,99 @@
+
+
+public class MyClass{
+	
+		public static void main(String s[])
+		{
+			circle c = new circle();
+			c.findArea();
+			c.findPerimeter();
+			rectangle r = new rectangle();
+			r.findArea();
+			r.findPerimeter();
+			triangle t = new triangle();
+			t.findArea();
+			t.findPerimeter();
+		} 
+}
+
+ abstract class figures{	
+	double dim1;
+	double area;
+	double perimeter;
+	abstract void findArea();
+	abstract void findPerimeter();
+	
+}
+ 
+ class circle extends figures{
+	 
+	 int pi;
+	 
+	 circle(){
+		 dim1 = 23;
+		 pi = 22/7;
+	 }
+	 
+	 void findArea(){
+		 
+		 area = pi * dim1 * dim1;
+		 System.out.println("Area of circle is " + area);
+		 
+	 }
+	 
+	 void findPerimeter(){
+		 
+		 perimeter = 2* pi*dim1;
+		 System.out.println("Perimeter of circle is " + perimeter);
+	 }
+ }
+ 
+ class rectangle extends figures{
+	 
+	 double dim2;
+	 
+	 
+	rectangle(){
+		
+		dim1 = 40;
+		dim2 = 50;
+	}
+	 void findArea(){
+		 
+		 area = dim1 *dim2;
+		 System.out.println("Area of rectangle is " + area);
+		 
+	 }
+	 
+	 void findPerimeter(){
+		 
+		 perimeter = 2*(dim1 + dim2);
+		 System.out.println("Perimeter of rectangle is " + perimeter);
+	 }
+ }
+ 
+ class triangle extends figures{
+	 
+	 double height;
+	 
+	 triangle(){
+		 
+		 dim1 = 30;
+		 height = 15;
+		 
+	 }
+	 
+void findArea(){
+		 
+		 area = dim1 * height * 1/2;
+		 System.out.println("Area of triangle is " + area);
+		 
+	 }
+	 
+	 void findPerimeter(){
+		 
+		 perimeter = dim1 * 3;
+		 System.out.println("Perimeter of triangle is " + perimeter);
+	 }
+ }
+ 
